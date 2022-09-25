@@ -1,0 +1,107 @@
+:root {
+  font-family: Segoe UI, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+header {
+  background-color: pink;
+}
+
+#sidebar-content {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+
+  main {
+    flex: 1 1 70%;
+    min-width: 25ch;
+    background-color: antiquewhite;
+  }
+
+  aside {
+    flex: 1 1 20%;
+    min-width: 15ch;
+  }
+}
+
+header,
+main,
+aside {
+  padding: 1.5rem;
+}
+
+.main-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 3rem 0 6rem 0;
+}
+
+.project-title {
+  font-size: 1.2rem;
+
+  hr {
+    border: 0;
+    height: 1px;
+    background-color: rgb(182, 182, 182);
+    margin: 1rem 0;
+  }
+}
+
+.project-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sidebar-btn {
+  padding: 0.5rem 1rem;
+  text-align: left;
+  border: 1px solid transparent;
+  border-radius: 0.3rem;
+  background-color: transparent;
+  font-family: Segoe UI, Arial, sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  transition: 300ms ease;
+
+  &:hover {
+    
+    border: 1px solid rgb(182, 182, 182);
+  }
+}
+
+.todo-card {
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.192);
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
