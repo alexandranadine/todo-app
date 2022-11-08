@@ -1,8 +1,20 @@
+$background: #e7f5fd;
+$main: #fffffe;
+$button: #ff8ba7;
+$secondary: #ffc6c7;
+$tertiary: #c3f0ca;
+$icon: #a8a8a8;
+$large-text: #33272a;
+$p-text: #594a4e;
+$shadow: -4px -6px 15px -3px rgba(0, 0, 0, 0.1),
+  0 4px 6px -4px rgba(0, 0, 0, 0.1);
+
 :root {
   font-family: Segoe UI, Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
+  color: $p-text;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -19,63 +31,93 @@
   box-sizing: inherit;
 }
 
+html,
 body {
-  margin: 0;
+  margin: 1rem;
   min-width: 320px;
   min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  background: $background;
+  // overflow: hidden;
+  // border: 1px solid red;
 }
 
 header {
-  background-color: pink;
+  color: $large-text;
+  background: $background;
+
+  h1 {
+    margin: 0;
+  }
+
+  i {
+    margin-right: 1rem;
+  }
 }
 
-#sidebar-content {
+.side-main {
   display: flex;
   flex-wrap: wrap;
-  height: 100vh;
+  gap: 2rem;
 
   main {
     flex: 1 1 70%;
     min-width: 25ch;
-    background-color: antiquewhite;
+    background: $main;
+    border-radius: 1rem;
+    box-shadow: $shadow;
+
+    h1 {
+      color: $large-text;
+      margin: 0;
+    }
+
+    h2 {
+      font-weight: 600;
+      color: $large-text;
+    }
+
+    hr {
+      border: 0;
+      height: 1px;
+      background-color: lightgray;
+      margin: 1rem 0;
+    }
   }
 
   aside {
     flex: 1 1 20%;
-    min-width: 15ch;
+    min-width: 25ch;
+    background: $main;
+    border-radius: 1rem;
+    box-shadow: $shadow;
   }
 }
 
 header,
 main,
 aside {
-  padding: 1.5rem;
+  padding: 2rem 1.5rem;
 }
 
-.main-links {
+.main-buttons {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin: 3rem 0 6rem 0;
 }
 
 .project-title {
   font-size: 1.2rem;
+  margin-top: 3rem;
 
   hr {
     border: 0;
     height: 1px;
-    background-color: rgb(182, 182, 182);
+    background-color: lightgray;
     margin: 1rem 0;
   }
 }
 
-.project-links {
+.project-buttons {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -90,18 +132,46 @@ aside {
   font-family: Segoe UI, Arial, sans-serif;
   font-size: 1.1rem;
   letter-spacing: 0.5px;
-  transition: 300ms ease;
+  transition: 100ms ease;
+
+  i {
+    font-size: 1.3rem;
+    margin-right: 1rem;
+    color: $icon;
+    transition: 300ms ease;
+  }
 
   &:hover {
-    
-    border: 1px solid rgb(182, 182, 182);
+    color: $button;
+    border: 1px solid $button;
+  }
+}
+
+.sidebar-btn:hover i {
+  color: $button;
+}
+
+.active {
+  background-color: $button;
+  color: #fff;
+
+  i {
+    color: #fff;
+  }
+}
+
+.sidebar-btn:hover.active {
+  color: #fff;
+
+  i {
+    color: #fff;
   }
 }
 
 .todo-card {
   background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.192);
   border-radius: 1rem;
+  box-shadow: $shadow;
   padding: 1rem;
   margin-bottom: 1rem;
 }
