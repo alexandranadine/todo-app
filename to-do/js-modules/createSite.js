@@ -8,7 +8,8 @@ const mainContent = document.querySelector("#container");
 
 function createHeader() {
   const header = document.createElement("header");
-  header.innerHTML = `<h1><i class="fa-regular fa-rectangle-list"></i> To-Do</h1>`;
+  header.innerHTML = `<h1><i class="fa-regular fa-rectangle-list"></i> To-Do</h1>
+  <button><i class="fa-solid fa-plus"></i></button>`;
   return header;
 }
 
